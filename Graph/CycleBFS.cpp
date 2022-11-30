@@ -43,7 +43,7 @@ void solve()
 {
     int n, m;
     cin >> n >> m;
-    vector<int> arr[n + 1];
+    vector<int> arr[n];
     for (int i = 0; i < m; i++)
     {
         int u, v;
@@ -51,14 +51,18 @@ void solve()
         arr[v].push_back(u);
         arr[u].push_back(v);
     }
-    vector<int> vis(n + 1, 0);
-    for (int i = 1; i <=n; i++)
+    vector<int> vis(n, 0);
+    for (int i = 0; i < n; i++)
     {
         if (!vis[i])
         {
-            if(cycleBFS(i, -1, arr, vis)){
-                cout<<"YES"<<" "<< i<<nline;
-            }else cout<<"NO"<<nline;
+            if (cycleBFS(i, -1, arr, vis))
+            {
+                cout << "YES"
+                     << " " << i << nline;
+            }
+            else
+                cout << "NO" << nline;
         }
     }
 }

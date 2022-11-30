@@ -14,25 +14,29 @@ const long long int LINF = 1e18;
 #define all(x) x.begin(), x.end()
 #define set_bits __builtin_popcountll
 
-bool checkBipartite(int node, vector<int> arr[], vector<int> &vis){
+bool checkBipartitebfs(int node, vector<int> arr[], vector<int> &vis)
+{
     queue<int> q;
-    vis[node]=1;
+    vis[node] = 1;
     q.push(node);
     while (!q.empty())
     {
         int temp = q.front();
         q.pop();
-        for(auto j : arr[temp]){
-            if(vis[j]==-1){
-                vis[j]=1-vis[temp];
+        for (auto j : arr[temp])
+        {
+            if (vis[j] == -1)
+            {
+                vis[j] = 1 - vis[temp];
                 q.push(j);
-            }else if (vis[j]==vis[temp]){
+            }
+            else if (vis[j] == vis[temp])
+            {
                 return false;
             }
         }
     }
     return true;
-    
 }
 
 void solve()
@@ -50,13 +54,14 @@ void solve()
     vector<int> vis(n + 1, -1);
     for (int i = 1; i <= n; i++)
     {
-        if(vis[i]==-1){
-            if(!checkBipartite(i,arr,vis)){
-                cout<<"GOOD HAI JI"<<i <<nline;
+        if (vis[i] == -1)
+        {
+            if (!checkBipartitebfs(i, arr, vis))
+            {
+                cout << "GOOD HAI JI" << i << nline;
             }
         }
     }
-    
 }
 
 int main(int argc, char const *argv[])
