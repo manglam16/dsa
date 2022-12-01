@@ -3,7 +3,6 @@ using namespace std;
 
 // if visiting same node again and its on the same path it means it was previosly visited on the same path.
 
-// function for checking
 bool directedCycleCheck(int i, vector<int> &vis, vector<int> &pathVis, vector<int> adj[])
 {
     vis[i] = 1;
