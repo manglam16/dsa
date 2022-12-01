@@ -14,17 +14,24 @@ const long long int LINF = 1e18;
 #define all(x) x.begin(), x.end()
 #define set_bits __builtin_popcountll
 
-bool dfs(int i, vector<int> arr[], vector<int> &vis) {
-	if(vis[i]==-1) vis[i]=1; 
-	for (auto j : arr[i]) {
-		if (vis[j]==-1) {
-            vis[j]=1-vis[i];
-			if(!dfs(j,arr,vis)) return false;
-		}else if(vis[j]==vis[i]){
-            return false;
-        }
+bool dfs(int i, vector<int> arr[], vector<int> &vis)
+{
+	if (vis[i] == -1)
+		vis[i] = 1;
+	for (auto j : arr[i])
+	{
+		if (vis[j] == -1)
+		{
+			vis[j] = 1 - vis[i];
+			if (!dfs(j, arr, vis))
+				return false;
+		}
+		else if (vis[j] == vis[i])
+		{
+			return false;
+		}
 	}
-    return true;
+	return true;
 }
 
 void solve()
@@ -42,14 +49,16 @@ void solve()
 	}
 	for (int i = 1; i <= n; i++)
 	{
-		if (vis[i]==-1) {
-			if(dfs(i, arr, vis)){
-                cout<<"YES"<<endl;
-            }else
-            cout<<"NO"<<endl;
+		if (vis[i] == -1)
+		{
+			if (dfs(i, arr, vis))
+			{
+				cout << "YES" << endl;
+			}
+			else
+				cout << "NO" << endl;
 		}
 	}
-
 }
 
 int main(int argc, char const *argv[])
@@ -62,4 +71,4 @@ int main(int argc, char const *argv[])
 	{
 		solve();
 	}
-} 
+}
