@@ -13,8 +13,8 @@ vector<int> shortestPath(vector<vector<int>> &edges, int N, int M, int src)
         adj[v].push_back(u);
     }
     vector<int> dist(N, INT_MAX);
-    queue<pair<int, int>> q;
-    dist[src] = 0;
+    queue<pair<int, int>> q; //{node,distance}
+    dist[src] = 0;           // make dist of source to source as 0
     q.push({src, 0});
     while (!q.empty())
     {
