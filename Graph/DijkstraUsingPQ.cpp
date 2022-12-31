@@ -6,6 +6,10 @@
     problems in it:
     -it is greedy so will not look for further best in different direction.
     -Does not works on negative edge weights or negative cycles.
+
+    time complexity - Elog(V)
+
+
 */
 
 vector<int> dijkstra(int V, vector<vector<int>> adj[], int S)
