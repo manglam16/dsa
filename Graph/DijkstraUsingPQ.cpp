@@ -1,4 +1,5 @@
 /*
+
     Dijkstra Algorithm used to find used to shortest distance from a node to all other nodes in a graph. Works for both directed and undirected graph.
 
     We use priority queue or set to find the minimum edge weight and keep relaxing the edges along it.
@@ -8,7 +9,6 @@
     -Does not works on negative edge weights or negative cycles.
 
     time complexity - Elog(V)
-
 
 */
 
