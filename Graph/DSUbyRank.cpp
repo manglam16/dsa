@@ -3,7 +3,7 @@
     main two functions :
     union : which is used to add the edge to this data structure.
     find ultimate parent : used to find the ultimate parent.
-    both these operations are approximately constant (O(4*α)) difficult mathematical proo.
+    both these operations are approximately constant (O(4*α)) difficult mathematical proof.
 
     union by rank : here joining is decided by ranking of the different components.
     union by size : same thing is decided by size of components.
