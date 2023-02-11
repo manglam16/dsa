@@ -7,9 +7,9 @@ using namespace std;
 
 class DisjointSet
 {
-    vector<int> size, parent;
 
 public:
+    vector<int> size, parent;
     DisjointSet(int n)
     {
         size.resize(n + 1, 1);
