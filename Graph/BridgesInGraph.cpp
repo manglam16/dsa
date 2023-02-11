@@ -4,6 +4,7 @@
     we use two arrays tin(time of insertion) and low(which is lowest tin of all adjacent edges apart from
     parent).
     and check for each edge if we can reach it using other way or not using low array.
+    this is also known as tarjan's algorithm.
 */
 
 int timer = 1;
