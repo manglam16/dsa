@@ -1,1 +1,0 @@
-{"name":"Local: BipartiteDFS","url":"c:\\Users\\paliw\\Desktop\\Codes\\Graph\\BipartiteDFS.cpp","tests":[{"id":1654107892382,"input":"8 8\n1 2\n2 3\n3 4 \n4 5\n2 6\n6 7\n5 7 \n7 8","output":""}],"interactive":false,"memoryLimit":1024,"timeLimit":3000,"srcPath":"c:\\Users\\paliw\\Desktop\\Codes\\Graph\\BipartiteDFS.cpp","group":"local","local":true}
